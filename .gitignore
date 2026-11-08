@@ -1,0 +1,5 @@
+# Dependencies are installed from package-lock.json.
+node_modules/
+*.log
+.env
+.DS_Store

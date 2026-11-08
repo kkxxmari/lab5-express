@@ -1,0 +1,30 @@
+/* Use one font and a single accent throughout the form page. */
+:root {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #171717;
+  --accent: #e4002b;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+.page { width: min(760px, 100%); padding: 32px 24px; margin: auto; }
+h1 { font-size: 2.5rem; margin: 0 0 12px; }
+h2 { font-size: 1.5rem; margin: 0 0 24px; }
+p { line-height: 1.5; }
+nav { display: flex; flex-wrap: wrap; gap: 20px; padding-bottom: 24px; }
+a { color: var(--accent); }
+section { padding: 28px 0; border-top: 1px solid #bdbdbd; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+input, button { font: inherit; min-height: 44px; padding: 10px; }
+input { width: 100%; min-width: 0; border: 1px solid #777; }
+button { grid-column: 1 / -1; justify-self: start; background: var(--accent); color: #fff; border: 0; padding: 12px 24px; cursor: pointer; }
+button:hover { text-decoration: underline; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+footer { padding-top: 24px; border-top: 1px solid #bdbdbd; font-size: 0.95rem; }
+
+/* Put the input fields underneath each other on smaller devices. */
+@media (max-width: 520px) {
+  form { grid-template-columns: 1fr; }
+}

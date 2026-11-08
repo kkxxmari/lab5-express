@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 | Mariia Chalyk</title>
+    <link rel="stylesheet" href="/forms.css">
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Hello World</h1>
+        <p>Lab 5: Express forms</p>
+        <nav aria-label="Examples">
+          <a href="/">Welcome page</a>
+          <a href="/api/movies">Movie data</a>
+        </nav>
+      </header>
+
+      <section aria-labelledby="get-title">
+        <h2 id="get-title">GET request</h2>
+        <!-- GET adds these input values to /name as query parameters. -->
+        <form method="get" action="/name">
+          <div class="field">
+            <label for="first-get">First name</label>
+            <input type="text" id="first-get" name="firstname" autocomplete="given-name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="last-get">Last name</label>
+            <input type="text" id="last-get" name="lastname" autocomplete="family-name" required maxlength="100">
+          </div>
+          <button type="submit">Submit GET</button>
+        </form>
+      </section>
+
+      <section aria-labelledby="post-title">
+        <h2 id="post-title">POST request</h2>
+        <!-- Each label has a unique matching ID, even though field names repeat. -->
+        <form method="post" action="/name">
+          <div class="field">
+            <label for="first-post">First name</label>
+            <input type="text" id="first-post" name="firstname" autocomplete="given-name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="last-post">Last name</label>
+            <input type="text" id="last-post" name="lastname" autocomplete="family-name" required maxlength="100">
+          </div>
+          <button type="submit">Submit POST</button>
+        </form>
+      </section>
+      <footer>Mariia Chalyk | Lab 5</footer>
+    </main>
+  </body>
+</html>
